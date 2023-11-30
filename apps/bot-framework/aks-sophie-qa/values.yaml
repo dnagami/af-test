@@ -1,30 +1,4 @@
-sai-bot-framework:
-  global:
-    azureTenantId: 123456789012345678901234567890
-    keyvaultName: kv-bots-rd
-
-    identity:
-      resourceId: /subscriptions/123456789012345678901234567890/resourcegroups/rg-bots-rd/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-bots-rd
-      clientId: 123456789012345678901234567890
-      name: id-bots-rd
-
-  connector:
-    publicAccess:
-      domain: rd-bots.qa.saiapplications.com
-      environment: qa
-
-  proactive:
-    enabled: true
-    publicAccess:
-      domain: rd-bots-proactive.qa.saiapplications.com
-      environment: qa
-    mongo:
-      emailStore:
-        mongoUrlSecret: mongo-connstring
-    config:
-      ApiKey: 123456789012345678901234567890
-    bots:
-      # ======== BOT TEMPLATE ========
+# ======== BOT TEMPLATE ========
       # AF Assistant
       - name: string}
         type: indexer
@@ -102,4 +76,3 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: aaaaaaaaaaaa}
       # ============================
-        
