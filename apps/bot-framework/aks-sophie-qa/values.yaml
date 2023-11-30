@@ -113,7 +113,7 @@ sai-bot-framework:
           OPENAI_API_VERSION: "2023-09-01-preview"
           OPENAI_ENV: azure
           MONGO_DB: Assistente 10
-          INDEXER_HASH: Assistente 10
+          INDEXER_HASH: Assistente 11
           INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
           AGENT_NAME: Assistente 10
           OPENAI_MODEL: gpt-35-turbo-16k
@@ -127,4 +127,5 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: Assistente 10
 # ======== Assistente 10 BOT TEMPLATE END ========
+        
         
