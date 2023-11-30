@@ -88,7 +88,7 @@ sai-bot-framework:
           OPENAI_API_VERSION: "2023-09-01-preview"
           OPENAI_ENV: azure
           MONGO_DB: string}
-          INDEXER_HASH: stringupdated
+          INDEXER_HASH: stringupdated123
           INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
           AGENT_NAME: string
           OPENAI_MODEL: gpt-35-turbo-16k
@@ -102,4 +102,5 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: string
       # ======== string BOT TEMPLATE END ========
+        
         
