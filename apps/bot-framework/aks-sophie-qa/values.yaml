@@ -1,6 +1,6 @@
 # ======== BOT TEMPLATE ========
       # AF Assistant
-      - name: string}
+      - name: string
         type: indexer
         image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.12345
         msaSecretName: af-qa-app-credentials
@@ -8,10 +8,10 @@
           OPENAI_API_BASE: "https://aoa-sophie-demo.openai.azure.com/"
           OPENAI_API_VERSION: "2023-09-01-preview"
           OPENAI_ENV: azure
-          MONGO_DB: string}
-          INDEXER_HASH: string}
+          MONGO_DB: string
+          INDEXER_HASH: string
           INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
-          AGENT_NAME: string}
+          AGENT_NAME: string
           OPENAI_MODEL: gpt-35-turbo-16k
           PROMPT_COLLECTION: prompts
           SOURCE_ENABLE: "False"
@@ -21,6 +21,7 @@
           - envVar: OPENAI_API_KEY
             keyVaultSecretName: openai-demo-azure-key
           - envVar: INDEXER_API_KEY
+<<<<<<< HEAD
             keyVaultSecretName: string}
       # ============================
 
@@ -75,4 +76,7 @@
             keyVaultSecretName: openai-demo-azure-key
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: aaaaaaaaaaaa}
+=======
+            keyVaultSecretName: string
+>>>>>>> 2f712c3 (Update)
       # ============================
