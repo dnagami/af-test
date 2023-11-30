@@ -210,7 +210,7 @@ sai-bot-framework:
           OPENAI_API_VERSION: "2023-09-01-preview"
           OPENAI_ENV: azure
           MONGO_DB: Assistant 1}
-          INDEXER_HASH: Assistant 1
+          INDEXER_HASH: Assistant 2
           INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
           AGENT_NAME: Assistant 1
           OPENAI_MODEL: gpt-35-turbo-16k
@@ -224,4 +224,5 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: Assistant 1
       # ======== Assistant 1 BOT TEMPLATE END ========
+        
         
