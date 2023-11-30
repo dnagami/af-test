@@ -49,4 +49,3 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: string}
       # ============================
-        
