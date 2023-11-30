@@ -198,7 +198,7 @@ sai-bot-framework:
           OPENAI_API_VERSION: "2023-09-01-preview"
           OPENAI_ENV: azure
           MONGO_DB: shaushauhsuasa}
-          INDEXER_HASH: shaushauhsuasa
+          INDEXER_HASH: kkkkkkkkkkkkkkkkk
           INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
           AGENT_NAME: shaushauhsuasa
           OPENAI_MODEL: gpt-35-turbo-16k
@@ -212,4 +212,5 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: shaushauhsuasa
       # ======== shaushauhsuasa BOT TEMPLATE END ========
+        
         
