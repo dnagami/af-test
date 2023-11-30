@@ -198,3 +198,30 @@ sai-bot-framework:
 
         
         
+
+# ======== Assistant 1 BOT TEMPLATE ========
+      # AF Assistant
+      - name: Assistant 1
+        type: indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.12345
+        msaSecretName: af-qa-app-credentials
+        config:
+          OPENAI_API_BASE: "https://aoa-sophie-demo.openai.azure.com/"
+          OPENAI_API_VERSION: "2023-09-01-preview"
+          OPENAI_ENV: azure
+          MONGO_DB: Assistant 1}
+          INDEXER_HASH: Assistant 1
+          INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
+          AGENT_NAME: Assistant 1
+          OPENAI_MODEL: gpt-35-turbo-16k
+          PROMPT_COLLECTION: prompts
+          SOURCE_ENABLE: "False"
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: mongo-connstring
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: openai-demo-azure-key
+          - envVar: INDEXER_API_KEY
+            keyVaultSecretName: Assistant 1
+      # ======== Assistant 1 BOT TEMPLATE END ========
+        
