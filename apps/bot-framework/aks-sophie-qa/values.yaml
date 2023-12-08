@@ -155,3 +155,16 @@ sai-bot-framework:
           System.Collections.Generic.Dictionary`2[System.String,System.String]
 # ======== Test BOT TEMPLATE END ========
         
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+        secrets:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+# ======== Test BOT TEMPLATE END ========
+        
