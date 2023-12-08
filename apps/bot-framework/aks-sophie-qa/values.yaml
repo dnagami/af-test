@@ -130,17 +130,19 @@ sai-bot-framework:
         
         
 
-# ======== Test BOT TEMPLATE ========
-      # Test
-      - name: Test
-        type: Indexer
-        image: indexer
+# ======== {{{name}}} BOT TEMPLATE ========
+      # {{{name}}}
+      - name: {{{name}}}
+        type: {{{type}}}
+        image: {{{image}}}
         msaSecretName: msa-secret
         config:
-          System.Collections.Generic.Dictionary`2[System.String,System.String]
+          Config1: ValueFromConfig1
         secrets:
-          System.Collections.Generic.Dictionary`2[System.String,System.String]
-# ======== Test BOT TEMPLATE END ========
+          - envVar: EnvVarName
+            keyVaultSecretName: Key Vault Secret Name
+# ======== {{{name}}} BOT TEMPLATE END ========
+        
         
 
 # ======== Test BOT TEMPLATE ========
