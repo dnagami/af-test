@@ -223,3 +223,21 @@ sai-bot-framework:
             keyVaultSecretName: Key Vault Secret Name
 # ======== Test BOT TEMPLATE END ========
         
+
+# ======== Ind BOT TEMPLATE ========
+      # Ind
+      - name: Ind
+        type: Indexer
+        image: Ind
+        msaSecretName: msa-secret
+        config:
+          IndexerHash: Ind
+IndexerPrompt: Ind
+UserTips: Ind
+        secrets:
+          - envVar: IndexerApiKey
+            keyVaultSecretName: Ind
+- envVar: MongoDbConnectionString
+            keyVaultSecretName: Ind
+# ======== Ind BOT TEMPLATE END ========
+        
