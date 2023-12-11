@@ -193,27 +193,24 @@ IndexerHash: hahahahaha
             keyVaultSecretName: haha
 # ======== haha BOT TEMPLATE END ========
 
+
 # ======== kkkkkkkkkkkkkkk BOT TEMPLATE ========
       # kkkkkkkkkkkkkkk
       - name: kkkkkkkkkkkkkkk
         type: Indexer
-        image: kkkkkkkkkkkkkkk
+        image: kkkkkkkkkkkkkkk123
         msaSecretName: msa-secret
         config:
             
-          IndexerPrompt: kkkkkkkkkkkkkkk
-
-          IndexerHash: kkkkkkkkkkkkkkk
+          IndexerPrompt: kkkkkkkkkkkkkkk123
+          IndexerHash: kkkkkkkkkkkkkkk123
         secrets:
             
           - envVar: MongoDbConnectionString
-            keyVaultSecretName: kkkkkkkkkkkkkkk
-
+            keyVaultSecretName: kkkkkkkkkkkkkkk213
           - envVar: OpenAiApiKey
-            keyVaultSecretName: kkkkkkkkkkkkkkk
-# ======== kkkkkkkkkkkkkkk BOT TEMPLATE END ========
-
-# ======== oioioi BOT TEMPLATE ========
+            keyVaultSecretName: kkkkkkkkkkkkkkk312
+# ======== kkkkkkkkkkkkkkk BOT TEMPLATE END ========# ======== oioioi BOT TEMPLATE ========
       # oioioi
       - name: oioioi
         type: Indexer
