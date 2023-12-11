@@ -45,3 +45,23 @@ sai-bot-framework:
         keyVaultSecretName: string
 assistantId: 6577751e1c476fd05b86a356
 assistantName: Bot test
+
+# ======== Bot test BOT TEMPLATE ========
+      # Bot test
+      - name: Bot test
+        type: Indexer
+        image: Bot test
+        msaSecretName: msa-secret
+        config:
+          
+            IndexerPrompt: Bot test
+
+            IndexerHash: Bot test
+        secrets:
+          
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Bot test
+
+          - envVar: OpenAiApiKey
+            keyVaultSecretName: Bot test
+# ======== Bot test BOT TEMPLATE END ========
