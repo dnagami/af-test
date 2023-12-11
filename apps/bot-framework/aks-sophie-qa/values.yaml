@@ -77,7 +77,7 @@ IndexerHash: mc8219uq88jew9acnj8eq
         image: acrapplications.azurecr.io/sai-bot-framework/jarvix:0.0.69.66afccd
         msaSecretName: msa-secret
         config:
-          OPENAI_API_BASE: Test
+          OPENAI_API_BASE: Update one field.
 OPENAI_API_VERSION: Test
 MONGO_DB: Test
         secrets:
@@ -86,4 +86,5 @@ MONGO_DB: Test
 - envVar: OPENAI_API_KEY
             keyVaultSecretName: Test
 # ======== Jarvix test BOT TEMPLATE END ========
+        
         
