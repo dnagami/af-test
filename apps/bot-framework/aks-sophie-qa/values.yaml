@@ -242,11 +242,11 @@ UserTips: Ind
 # ======== Ind BOT TEMPLATE END ========
         
 
-# ======== {{{name}}} BOT TEMPLATE ========
-      # {{{name}}}
-      - name: {{{name}}}
-        type: {{{type}}}
-        image: {{{image}}}
+# ======== Bot 4 BOT TEMPLATE ========
+      # Bot 4
+      - name: Bot 4
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
         msaSecretName: msa-secret
         config:
           IndexerPrompt: Testing a new prompt with update.
@@ -256,14 +256,14 @@ IndexerHash: mc8921j32c18j21921jm3
             keyVaultSecretName: mongodb://localhost:27017/
 - envVar: 
             keyVaultSecretName:
-# ======== {{{name}}} BOT TEMPLATE END ========
+# ======== Bot 4 BOT TEMPLATE END ========
         
         
-# ======== {{{name}}} BOT TEMPLATE ========
-      # {{{name}}}
-      - name: {{{name}}}
-        type: {{{type}}}
-        image: {{{image}}}
+# ======== Bot 4 BOT TEMPLATE ========
+      # Bot 4
+      - name: Bot 4
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
         msaSecretName: msa-secret
         config:
           IndexerPrompt: Testing a new prompt with update and now I want to debug.
@@ -273,5 +273,22 @@ IndexerHash: mc8921j32c18j21921jm3
             keyVaultSecretName: mongodb://localhost:27017/
 - envVar: 
             keyVaultSecretName:
-# ======== {{{name}}} BOT TEMPLATE END ========
+# ======== Bot 4 BOT TEMPLATE END ========
+        
+
+# ======== Bot 4 BOT TEMPLATE ========
+      # Bot 4
+      - name: Bot 4
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Bot 4 prompt
+IndexerHash: mj89cje289acsa8dnoa8d
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== Bot 4 BOT TEMPLATE END ========
         
