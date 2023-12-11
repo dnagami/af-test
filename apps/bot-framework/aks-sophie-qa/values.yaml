@@ -261,3 +261,19 @@ IndexerHash: hahahahaha
           - envVar: OpenAiApiKey
             keyVaultSecretName: popopopopo
 # ======== popopopopo BOT TEMPLATE END ========
+
+# ======== florida BOT TEMPLATE ========
+      # florida
+      - name: florida
+        type: Indexer
+        image: florida
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: florida
+          IndexerHash: florida
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: florida
+          - envVar: OpenAiApiKey
+            keyVaultSecretName: florida
+# ======== florida BOT TEMPLATE END ========
