@@ -101,3 +101,12 @@ IndexerHash: hahahahaha
             - envVar: OpenAiApiKey
             keyVaultSecretName: lelelelele
 # ======== lelelelele BOT TEMPLATE END ========
+
+# ======== kkkkkkkkkkkkkk BOT TEMPLATE ========
+      # kkkkkkkkkkkkkk
+      - name: kkkkkkkkkkkkkk
+        type: Indexer
+        image: kkkkkkkkkkkkkk
+        msaSecretName: msa-secret
+        config:{0}        secrets:{1}
+# ======== kkkkkkkkkkkkkk BOT TEMPLATE END ========
