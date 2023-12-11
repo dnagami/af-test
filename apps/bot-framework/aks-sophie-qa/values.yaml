@@ -278,3 +278,20 @@ IndexerHash: mj89cje289acsa8dnoa8d
             keyVaultSecretName:
 # ======== Bot 4 BOT TEMPLATE END ========
         
+
+# ======== Bot 5 BOT TEMPLATE ========
+      # Bot 5
+      - name: Bot 5
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Test prompt
+IndexerHash: 12v313qeweavavesaevaesaev
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== Bot 5 BOT TEMPLATE END ========
+        
