@@ -49,3 +49,20 @@ sai-bot-framework:
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: string
       # ============================
+
+# ======== Bot 1 BOT TEMPLATE ========
+      # Bot 1
+      - name: Bot 1
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: This is a prompt test.
+IndexerHash: mc8219uq88jew9acnj8eq
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== Bot 1 BOT TEMPLATE END ========
+        
