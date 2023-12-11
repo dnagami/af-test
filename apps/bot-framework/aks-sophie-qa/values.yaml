@@ -138,11 +138,12 @@ MONGO_DB: Test
         image: Testtt
         msaSecretName: msa-secret
         config:
-          IndexerPrompt: Testtt123
+          IndexerPrompt: Testtt
 IndexerHash: Testtt
         secrets:
           - envVar: MongoDbConnectionString
             keyVaultSecretName: Testtt
 # ======== Testtt BOT TEMPLATE END ========
+        
         
         
