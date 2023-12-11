@@ -181,3 +181,18 @@ IndexerHash: Testttttt
           - envVar: MongoDbConnectionString
             keyVaultSecretName: Testttttt
 # ======== Testttttt BOT TEMPLATE END ========
+
+
+# ======== lalalalalalalalala BOT TEMPLATE ========
+      # lalalalalalalalala:
+      - name: lalalalalalalalala
+        type: Indexer
+        image: lalalalalalalalala
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: lalalalalalalalala
+IndexerHash: lalalalalalalalala
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: lalalalalalalalala
+# ======== lalalalalalalalala BOT TEMPLATE END ========
