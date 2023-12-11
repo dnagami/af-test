@@ -213,3 +213,20 @@ IndexerHash: pipipipopop
 - envVar: OpenAiApiKey
             keyVaultSecretName: pipipipopop
 # ======== pipipipopop BOT TEMPLATE END ========
+
+
+# ======== Bot test BOT TEMPLATE ========
+      # Bot test
+      - name: Bot test
+        type: Indexer
+        image: Bot test
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Bot test
+IndexerHash: Bot test
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Bot test
+- envVar: OpenAiApiKey
+            keyVaultSecretName: Bot test
+# ======== Bot test BOT TEMPLATE END ========
