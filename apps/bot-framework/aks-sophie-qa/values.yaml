@@ -65,3 +65,19 @@ assistantName: Bot test
           - envVar: OpenAiApiKey
             keyVaultSecretName: Bot test
 # ======== Bot test BOT TEMPLATE END ========
+
+# ======== hahahahaha BOT TEMPLATE ========
+      # hahahahaha
+      - name: hahahahaha
+        type: Indexer
+        image: hahahahaha
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: hahahahaha
+IndexerHash: hahahahaha
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: hahahahaha
+- envVar: OpenAiApiKey
+            keyVaultSecretName: hahahahaha
+# ======== hahahahaha BOT TEMPLATE END ========
