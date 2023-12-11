@@ -96,10 +96,11 @@ MONGO_DB: Test
         image: acrapplications.azurecr.io/sai-bot-framework/jarvix:0.0.69.66afccd
         msaSecretName: msa-secret
         config:
-          IndexerPrompt: Test
-IndexerHash: Test
+          IndexerPrompt: Test123
+IndexerHash: Test123
         secrets:
           - envVar: MongoDbConnectionString
-            keyVaultSecretName: Test
+            keyVaultSecretName: Test123
 # ======== Bot test BOT TEMPLATE END ========
+        
         
