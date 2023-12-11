@@ -130,3 +130,18 @@ MONGO_DB: Test
         
         
         
+
+# ======== Testtt BOT TEMPLATE ========
+      # Testtt
+      - name: Testtt
+        type: Indexer
+        image: Testtt
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Testtt
+IndexerHash: Testtt
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Testtt
+# ======== Testtt BOT TEMPLATE END ========
+        
