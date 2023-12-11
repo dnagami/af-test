@@ -279,6 +279,287 @@ IndexerHash: mj89cje289acsa8dnoa8d
 # ======== Bot 4 BOT TEMPLATE END ========
         
 
+sai-bot-framework:
+  global:
+    azureTenantId: 123456789012345678901234567890
+    keyvaultName: kv-bots-rd
+
+    identity:
+      resourceId: /subscriptions/123456789012345678901234567890/resourcegroups/rg-bots-rd/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-bots-rd
+      clientId: 123456789012345678901234567890
+      name: id-bots-rd
+
+  connector:
+    publicAccess:
+      domain: rd-bots.qa.saiapplications.com
+      environment: qa
+
+  proactive:
+    enabled: true
+    publicAccess:
+      domain: rd-bots-proactive.qa.saiapplications.com
+      environment: qa
+    mongo:
+      emailStore:
+        mongoUrlSecret: mongo-connstring
+    config:
+      ApiKey: 123456789012345678901234567890
+    bots:
+# ======== BOT TEMPLATE ========
+      # AF Assistant
+      - name: string
+        type: indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.12345
+        msaSecretName: af-qa-app-credentials
+        config:
+          OPENAI_API_BASE: "https://aoa-sophie-demo.openai.azure.com/"
+          OPENAI_API_VERSION: "2023-09-01-preview"
+          OPENAI_ENV: azure
+          MONGO_DB: string
+          INDEXER_HASH: string
+          INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
+          AGENT_NAME: string
+          OPENAI_MODEL: gpt-35-turbo-16k
+          PROMPT_COLLECTION: prompts
+          SOURCE_ENABLE: "False"
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: mongo-connstring
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: openai-demo-azure-key
+          - envVar: INDEXER_API_KEY
+            keyVaultSecretName: string
+      # ============================
+
+# ======== Assistant 1 BOT TEMPLATE ========
+      # Assistant 1
+      - name: Assistant 1
+        type: indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.12345
+        msaSecretName: af-qa-app-credentials
+        config:
+          OPENAI_API_BASE: "https://aoa-sophie-demo.openai.azure.com/"
+          OPENAI_API_VERSION: "2023-09-01-preview"
+          OPENAI_ENV: azure
+          MONGO_DB: Assistant 1
+          INDEXER_HASH: Assistant 1
+          INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
+          AGENT_NAME: Assistant 1
+          OPENAI_MODEL: gpt-35-turbo-16k
+          PROMPT_COLLECTION: prompts
+          SOURCE_ENABLE: "False"
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: mongo-connstring
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: openai-demo-azure-key
+          - envVar: INDEXER_API_KEY
+            keyVaultSecretName: Assistant 1
+# ======== Assistant 1 BOT TEMPLATE END ========
+
+# ======== Assistant 2 BOT TEMPLATE ========
+      # Assistant 2
+      - name: Assistant 2
+        type: indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.12345
+        msaSecretName: af-qa-app-credentials
+        config:
+          OPENAI_API_BASE: "https://aoa-sophie-demo.openai.azure.com/"
+          OPENAI_API_VERSION: "2023-09-01-preview"
+          OPENAI_ENV: azure
+          MONGO_DB: Assistant 2
+          INDEXER_HASH: Assistant 2
+          INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
+          AGENT_NAME: Assistant 2
+          OPENAI_MODEL: gpt-35-turbo-16k
+          PROMPT_COLLECTION: prompts
+          SOURCE_ENABLE: "False"
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: mongo-connstring
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: openai-demo-azure-key
+          - envVar: INDEXER_API_KEY
+            keyVaultSecretName: Assistant 2
+# ======== Assistant 2 BOT TEMPLATE END ========
+
+# ======== Assistente 10 BOT TEMPLATE ========
+      # Assistente 10
+      - name: Assistente 10
+        type: indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.12345
+        msaSecretName: af-qa-app-credentials
+        config:
+          OPENAI_API_BASE: "https://aoa-sophie-demo.openai.azure.com/"
+          OPENAI_API_VERSION: "2023-09-01-preview"
+          OPENAI_ENV: azure
+          MONGO_DB: Assistente 10
+          INDEXER_HASH: Assistente 11
+          INDEXER_URL: "https://llmindexer-api.qa.saiapplications.com/customquery"
+          AGENT_NAME: Assistente 10
+          OPENAI_MODEL: gpt-35-turbo-16k
+          PROMPT_COLLECTION: prompts
+          SOURCE_ENABLE: "False"
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: mongo-connstring
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: openai-demo-azure-key
+          - envVar: INDEXER_API_KEY
+            keyVaultSecretName: Assistente 10
+# ======== Assistente 10 BOT TEMPLATE END ========
+        
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          Config1: ValueFromConfig1
+        secrets:
+          - envVar: EnvVarName
+            keyVaultSecretName: Key Vault Secret Name
+# ======== Test BOT TEMPLATE END ========
+        
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+        secrets:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+# ======== Test BOT TEMPLATE END ========
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+        secrets:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+# ======== Test BOT TEMPLATE END ========
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+        secrets:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+# ======== Test BOT TEMPLATE END ========
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+        secrets:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+# ======== Test BOT TEMPLATE END ========
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+        secrets:
+          System.Collections.Generic.Dictionary`2[System.String,System.String]
+# ======== Test BOT TEMPLATE END ========
+        
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Indexer
+        image: indexer
+        msaSecretName: msa-secret
+        config:
+          Config1: ValueFromConfig1
+        secrets:
+          - envVar: EnvVarName
+            keyVaultSecretName: Key Vault Secret Name
+# ======== Test BOT TEMPLATE END ========
+        
+
+# ======== Ind BOT TEMPLATE ========
+      # Ind
+      - name: Ind
+        type: Indexer
+        image: Ind
+        msaSecretName: msa-secret
+        config:
+          IndexerHash: Ind
+IndexerPrompt: Ind
+UserTips: Ind
+        secrets:
+          - envVar: IndexerApiKey
+            keyVaultSecretName: Ind
+- envVar: MongoDbConnectionString
+            keyVaultSecretName: Ind
+# ======== Ind BOT TEMPLATE END ========
+        
+
+c2FpLWJvdC1mcmFtZXdvcms6DQogIGdsb2JhbDoNCiAgICBhenVyZVRlbmFudElkOiAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTANCiAgICBrZXl2YXVsdE5hbWU6IGt2LWJvdHMtcmQNCg0KICAgIGlkZW50aXR5Og0KICAgICAgcmVzb3VyY2VJZDogL3N1YnNjcmlwdGlvbnMvMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwL3Jlc291cmNlZ3JvdXBzL3JnLWJvdHMtcmQvcHJvdmlkZXJzL01pY3Jvc29mdC5NYW5hZ2VkSWRlbnRpdHkvdXNlckFzc2lnbmVkSWRlbnRpdGllcy9pZC1ib3RzLXJkDQogICAgICBjbGllbnRJZDogMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwDQogICAgICBuYW1lOiBpZC1ib3RzLXJkDQoNCiAgY29ubmVjdG9yOg0KICAgIHB1YmxpY0FjY2VzczoNCiAgICAgIGRvbWFpbjogcmQtYm90cy5xYS5zYWlhcHBsaWNhdGlvbnMuY29tDQogICAgICBlbnZpcm9ubWVudDogcWENCg0KICBwcm9hY3RpdmU6DQogICAgZW5hYmxlZDogdHJ1ZQ0KICAgIHB1YmxpY0FjY2VzczoNCiAgICAgIGRvbWFpbjogcmQtYm90cy1wcm9hY3RpdmUucWEuc2FpYXBwbGljYXRpb25zLmNvbQ0KICAgICAgZW52aXJvbm1lbnQ6IHFhDQogICAgbW9uZ286DQogICAgICBlbWFpbFN0b3JlOg0KICAgICAgICBtb25nb1VybFNlY3JldDogbW9uZ28tY29ubnN0cmluZw0KICAgIGNvbmZpZzoNCiAgICAgIEFwaUtleTogMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwDQogICAgYm90czoNCiMgPT09PT09PT0gQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIEFGIEFzc2lzdGFudA0KICAgICAgLSBuYW1lOiBzdHJpbmcNCiAgICAgICAgdHlwZTogaW5kZXhlcg0KICAgICAgICBpbWFnZTogYWNyYXBwbGljYXRpb25zLmF6dXJlY3IuaW8vc2FpLWJvdC1mcmFtZXdvcmsvaW5kZXhlcjowLjAuMzEuMTIzNDUNCiAgICAgICAgbXNhU2VjcmV0TmFtZTogYWYtcWEtYXBwLWNyZWRlbnRpYWxzDQogICAgICAgIGNvbmZpZzoNCiAgICAgICAgICBPUEVOQUlfQVBJX0JBU0U6ICJodHRwczovL2FvYS1zb3BoaWUtZGVtby5vcGVuYWkuYXp1cmUuY29tLyINCiAgICAgICAgICBPUEVOQUlfQVBJX1ZFUlNJT046ICIyMDIzLTA5LTAxLXByZXZpZXciDQogICAgICAgICAgT1BFTkFJX0VOVjogYXp1cmUNCiAgICAgICAgICBNT05HT19EQjogc3RyaW5nDQogICAgICAgICAgSU5ERVhFUl9IQVNIOiBzdHJpbmcNCiAgICAgICAgICBJTkRFWEVSX1VSTDogImh0dHBzOi8vbGxtaW5kZXhlci1hcGkucWEuc2FpYXBwbGljYXRpb25zLmNvbS9jdXN0b21xdWVyeSINCiAgICAgICAgICBBR0VOVF9OQU1FOiBzdHJpbmcNCiAgICAgICAgICBPUEVOQUlfTU9ERUw6IGdwdC0zNS10dXJiby0xNmsNCiAgICAgICAgICBQUk9NUFRfQ09MTEVDVElPTjogcHJvbXB0cw0KICAgICAgICAgIFNPVVJDRV9FTkFCTEU6ICJGYWxzZSINCiAgICAgICAgc2VjcmV0czoNCiAgICAgICAgICAtIGVudlZhcjogTU9OR09fVVJMDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IG1vbmdvLWNvbm5zdHJpbmcNCiAgICAgICAgICAtIGVudlZhcjogT1BFTkFJX0FQSV9LRVkNCiAgICAgICAgICAgIGtleVZhdWx0U2VjcmV0TmFtZTogb3BlbmFpLWRlbW8tYXp1cmUta2V5DQogICAgICAgICAgLSBlbnZWYXI6IElOREVYRVJfQVBJX0tFWQ0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBzdHJpbmcNCiAgICAgICMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KDQojID09PT09PT09IEFzc2lzdGFudCAxIEJPVCBURU1QTEFURSA9PT09PT09PQ0KICAgICAgIyBBc3Npc3RhbnQgMQ0KICAgICAgLSBuYW1lOiBBc3Npc3RhbnQgMQ0KICAgICAgICB0eXBlOiBpbmRleGVyDQogICAgICAgIGltYWdlOiBhY3JhcHBsaWNhdGlvbnMuYXp1cmVjci5pby9zYWktYm90LWZyYW1ld29yay9pbmRleGVyOjAuMC4zMS4xMjM0NQ0KICAgICAgICBtc2FTZWNyZXROYW1lOiBhZi1xYS1hcHAtY3JlZGVudGlhbHMNCiAgICAgICAgY29uZmlnOg0KICAgICAgICAgIE9QRU5BSV9BUElfQkFTRTogImh0dHBzOi8vYW9hLXNvcGhpZS1kZW1vLm9wZW5haS5henVyZS5jb20vIg0KICAgICAgICAgIE9QRU5BSV9BUElfVkVSU0lPTjogIjIwMjMtMDktMDEtcHJldmlldyINCiAgICAgICAgICBPUEVOQUlfRU5WOiBhenVyZQ0KICAgICAgICAgIE1PTkdPX0RCOiBBc3Npc3RhbnQgMQ0KICAgICAgICAgIElOREVYRVJfSEFTSDogQXNzaXN0YW50IDENCiAgICAgICAgICBJTkRFWEVSX1VSTDogImh0dHBzOi8vbGxtaW5kZXhlci1hcGkucWEuc2FpYXBwbGljYXRpb25zLmNvbS9jdXN0b21xdWVyeSINCiAgICAgICAgICBBR0VOVF9OQU1FOiBBc3Npc3RhbnQgMQ0KICAgICAgICAgIE9QRU5BSV9NT0RFTDogZ3B0LTM1LXR1cmJvLTE2aw0KICAgICAgICAgIFBST01QVF9DT0xMRUNUSU9OOiBwcm9tcHRzDQogICAgICAgICAgU09VUkNFX0VOQUJMRTogIkZhbHNlIg0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIC0gZW52VmFyOiBNT05HT19VUkwNCiAgICAgICAgICAgIGtleVZhdWx0U2VjcmV0TmFtZTogbW9uZ28tY29ubnN0cmluZw0KICAgICAgICAgIC0gZW52VmFyOiBPUEVOQUlfQVBJX0tFWQ0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBvcGVuYWktZGVtby1henVyZS1rZXkNCiAgICAgICAgICAtIGVudlZhcjogSU5ERVhFUl9BUElfS0VZDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IEFzc2lzdGFudCAxDQojID09PT09PT09IEFzc2lzdGFudCAxIEJPVCBURU1QTEFURSBFTkQgPT09PT09PT0NCg0KIyA9PT09PT09PSBBc3Npc3RhbnQgMiBCT1QgVEVNUExBVEUgPT09PT09PT0NCiAgICAgICMgQXNzaXN0YW50IDINCiAgICAgIC0gbmFtZTogQXNzaXN0YW50IDINCiAgICAgICAgdHlwZTogaW5kZXhlcg0KICAgICAgICBpbWFnZTogYWNyYXBwbGljYXRpb25zLmF6dXJlY3IuaW8vc2FpLWJvdC1mcmFtZXdvcmsvaW5kZXhlcjowLjAuMzEuMTIzNDUNCiAgICAgICAgbXNhU2VjcmV0TmFtZTogYWYtcWEtYXBwLWNyZWRlbnRpYWxzDQogICAgICAgIGNvbmZpZzoNCiAgICAgICAgICBPUEVOQUlfQVBJX0JBU0U6ICJodHRwczovL2FvYS1zb3BoaWUtZGVtby5vcGVuYWkuYXp1cmUuY29tLyINCiAgICAgICAgICBPUEVOQUlfQVBJX1ZFUlNJT046ICIyMDIzLTA5LTAxLXByZXZpZXciDQogICAgICAgICAgT1BFTkFJX0VOVjogYXp1cmUNCiAgICAgICAgICBNT05HT19EQjogQXNzaXN0YW50IDINCiAgICAgICAgICBJTkRFWEVSX0hBU0g6IEFzc2lzdGFudCAyDQogICAgICAgICAgSU5ERVhFUl9VUkw6ICJodHRwczovL2xsbWluZGV4ZXItYXBpLnFhLnNhaWFwcGxpY2F0aW9ucy5jb20vY3VzdG9tcXVlcnkiDQogICAgICAgICAgQUdFTlRfTkFNRTogQXNzaXN0YW50IDINCiAgICAgICAgICBPUEVOQUlfTU9ERUw6IGdwdC0zNS10dXJiby0xNmsNCiAgICAgICAgICBQUk9NUFRfQ09MTEVDVElPTjogcHJvbXB0cw0KICAgICAgICAgIFNPVVJDRV9FTkFCTEU6ICJGYWxzZSINCiAgICAgICAgc2VjcmV0czoNCiAgICAgICAgICAtIGVudlZhcjogTU9OR09fVVJMDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IG1vbmdvLWNvbm5zdHJpbmcNCiAgICAgICAgICAtIGVudlZhcjogT1BFTkFJX0FQSV9LRVkNCiAgICAgICAgICAgIGtleVZhdWx0U2VjcmV0TmFtZTogb3BlbmFpLWRlbW8tYXp1cmUta2V5DQogICAgICAgICAgLSBlbnZWYXI6IElOREVYRVJfQVBJX0tFWQ0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBBc3Npc3RhbnQgMg0KIyA9PT09PT09PSBBc3Npc3RhbnQgMiBCT1QgVEVNUExBVEUgRU5EID09PT09PT09CgojID09PT09PT09IEFzc2lzdGVudGUgMTAgQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIEFzc2lzdGVudGUgMTANCiAgICAgIC0gbmFtZTogQXNzaXN0ZW50ZSAxMA0KICAgICAgICB0eXBlOiBpbmRleGVyDQogICAgICAgIGltYWdlOiBhY3JhcHBsaWNhdGlvbnMuYXp1cmVjci5pby9zYWktYm90LWZyYW1ld29yay9pbmRleGVyOjAuMC4zMS4xMjM0NQ0KICAgICAgICBtc2FTZWNyZXROYW1lOiBhZi1xYS1hcHAtY3JlZGVudGlhbHMNCiAgICAgICAgY29uZmlnOg0KICAgICAgICAgIE9QRU5BSV9BUElfQkFTRTogImh0dHBzOi8vYW9hLXNvcGhpZS1kZW1vLm9wZW5haS5henVyZS5jb20vIg0KICAgICAgICAgIE9QRU5BSV9BUElfVkVSU0lPTjogIjIwMjMtMDktMDEtcHJldmlldyINCiAgICAgICAgICBPUEVOQUlfRU5WOiBhenVyZQ0KICAgICAgICAgIE1PTkdPX0RCOiBBc3Npc3RlbnRlIDEwDQogICAgICAgICAgSU5ERVhFUl9IQVNIOiBBc3Npc3RlbnRlIDExDQogICAgICAgICAgSU5ERVhFUl9VUkw6ICJodHRwczovL2xsbWluZGV4ZXItYXBpLnFhLnNhaWFwcGxpY2F0aW9ucy5jb20vY3VzdG9tcXVlcnkiDQogICAgICAgICAgQUdFTlRfTkFNRTogQXNzaXN0ZW50ZSAxMA0KICAgICAgICAgIE9QRU5BSV9NT0RFTDogZ3B0LTM1LXR1cmJvLTE2aw0KICAgICAgICAgIFBST01QVF9DT0xMRUNUSU9OOiBwcm9tcHRzDQogICAgICAgICAgU09VUkNFX0VOQUJMRTogIkZhbHNlIg0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIC0gZW52VmFyOiBNT05HT19VUkwNCiAgICAgICAgICAgIGtleVZhdWx0U2VjcmV0TmFtZTogbW9uZ28tY29ubnN0cmluZw0KICAgICAgICAgIC0gZW52VmFyOiBPUEVOQUlfQVBJX0tFWQ0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBvcGVuYWktZGVtby1henVyZS1rZXkNCiAgICAgICAgICAtIGVudlZhcjogSU5ERVhFUl9BUElfS0VZDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IEFzc2lzdGVudGUgMTANCiMgPT09PT09PT0gQXNzaXN0ZW50ZSAxMCBCT1QgVEVNUExBVEUgRU5EID09PT09PT09DQogICAgICAgIA0KICAgICAgICAKCiMgPT09PT09PT0gVGVzdCBCT1QgVEVNUExBVEUgPT09PT09PT0NCiAgICAgICMgVGVzdA0KICAgICAgLSBuYW1lOiBUZXN0DQogICAgICAgIHR5cGU6IEluZGV4ZXINCiAgICAgICAgaW1hZ2U6IGluZGV4ZXINCiAgICAgICAgbXNhU2VjcmV0TmFtZTogbXNhLXNlY3JldA0KICAgICAgICBjb25maWc6DQogICAgICAgICAgQ29uZmlnMTogVmFsdWVGcm9tQ29uZmlnMQ0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIC0gZW52VmFyOiBFbnZWYXJOYW1lDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IEtleSBWYXVsdCBTZWNyZXQgTmFtZQ0KIyA9PT09PT09PSBUZXN0IEJPVCBURU1QTEFURSBFTkQgPT09PT09PT0NCiAgICAgICAgDQogICAgICAgIAoKIyA9PT09PT09PSBUZXN0IEJPVCBURU1QTEFURSA9PT09PT09PQ0KICAgICAgIyBUZXN0DQogICAgICAtIG5hbWU6IFRlc3QNCiAgICAgICAgdHlwZTogSW5kZXhlcg0KICAgICAgICBpbWFnZTogaW5kZXhlcg0KICAgICAgICBtc2FTZWNyZXROYW1lOiBtc2Etc2VjcmV0DQogICAgICAgIGNvbmZpZzoNCiAgICAgICAgICBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbU3lzdGVtLlN0cmluZyxTeXN0ZW0uU3RyaW5nXQ0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltTeXN0ZW0uU3RyaW5nLFN5c3RlbS5TdHJpbmddDQojID09PT09PT09IFRlc3QgQk9UIFRFTVBMQVRFIEVORCA9PT09PT09PQ0KICAgICAgICAKCiMgPT09PT09PT0gVGVzdCBCT1QgVEVNUExBVEUgPT09PT09PT0NCiAgICAgICMgVGVzdA0KICAgICAgLSBuYW1lOiBUZXN0DQogICAgICAgIHR5cGU6IEluZGV4ZXINCiAgICAgICAgaW1hZ2U6IGluZGV4ZXINCiAgICAgICAgbXNhU2VjcmV0TmFtZTogbXNhLXNlY3JldA0KICAgICAgICBjb25maWc6DQogICAgICAgICAgU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1N5c3RlbS5TdHJpbmcsU3lzdGVtLlN0cmluZ10NCiAgICAgICAgc2VjcmV0czoNCiAgICAgICAgICBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbU3lzdGVtLlN0cmluZyxTeXN0ZW0uU3RyaW5nXQ0KIyA9PT09PT09PSBUZXN0IEJPVCBURU1QTEFURSBFTkQgPT09PT09PT0NCiAgICAgICAgCgojID09PT09PT09IFRlc3QgQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIFRlc3QNCiAgICAgIC0gbmFtZTogVGVzdA0KICAgICAgICB0eXBlOiBJbmRleGVyDQogICAgICAgIGltYWdlOiBpbmRleGVyDQogICAgICAgIG1zYVNlY3JldE5hbWU6IG1zYS1zZWNyZXQNCiAgICAgICAgY29uZmlnOg0KICAgICAgICAgIFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltTeXN0ZW0uU3RyaW5nLFN5c3RlbS5TdHJpbmddDQogICAgICAgIHNlY3JldHM6DQogICAgICAgICAgU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1N5c3RlbS5TdHJpbmcsU3lzdGVtLlN0cmluZ10NCiMgPT09PT09PT0gVGVzdCBCT1QgVEVNUExBVEUgRU5EID09PT09PT09DQogICAgICAgIAoKIyA9PT09PT09PSBUZXN0IEJPVCBURU1QTEFURSA9PT09PT09PQ0KICAgICAgIyBUZXN0DQogICAgICAtIG5hbWU6IFRlc3QNCiAgICAgICAgdHlwZTogSW5kZXhlcg0KICAgICAgICBpbWFnZTogaW5kZXhlcg0KICAgICAgICBtc2FTZWNyZXROYW1lOiBtc2Etc2VjcmV0DQogICAgICAgIGNvbmZpZzoNCiAgICAgICAgICBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbU3lzdGVtLlN0cmluZyxTeXN0ZW0uU3RyaW5nXQ0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltTeXN0ZW0uU3RyaW5nLFN5c3RlbS5TdHJpbmddDQojID09PT09PT09IFRlc3QgQk9UIFRFTVBMQVRFIEVORCA9PT09PT09PQ0KICAgICAgICAKCiMgPT09PT09PT0gVGVzdCBCT1QgVEVNUExBVEUgPT09PT09PT0NCiAgICAgICMgVGVzdA0KICAgICAgLSBuYW1lOiBUZXN0DQogICAgICAgIHR5cGU6IEluZGV4ZXINCiAgICAgICAgaW1hZ2U6IGluZGV4ZXINCiAgICAgICAgbXNhU2VjcmV0TmFtZTogbXNhLXNlY3JldA0KICAgICAgICBjb25maWc6DQogICAgICAgICAgU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1N5c3RlbS5TdHJpbmcsU3lzdGVtLlN0cmluZ10NCiAgICAgICAgc2VjcmV0czoNCiAgICAgICAgICBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbU3lzdGVtLlN0cmluZyxTeXN0ZW0uU3RyaW5nXQ0KIyA9PT09PT09PSBUZXN0IEJPVCBURU1QTEFURSBFTkQgPT09PT09PT0NCiAgICAgICAgCgojID09PT09PT09IFRlc3QgQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIFRlc3QNCiAgICAgIC0gbmFtZTogVGVzdA0KICAgICAgICB0eXBlOiBJbmRleGVyDQogICAgICAgIGltYWdlOiBpbmRleGVyDQogICAgICAgIG1zYVNlY3JldE5hbWU6IG1zYS1zZWNyZXQNCiAgICAgICAgY29uZmlnOg0KICAgICAgICAgIENvbmZpZzE6IFZhbHVlRnJvbUNvbmZpZzENCiAgICAgICAgc2VjcmV0czoNCiAgICAgICAgICAtIGVudlZhcjogRW52VmFyTmFtZQ0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBLZXkgVmF1bHQgU2VjcmV0IE5hbWUNCiMgPT09PT09PT0gVGVzdCBCT1QgVEVNUExBVEUgRU5EID09PT09PT09DQogICAgICAgIAoKIyA9PT09PT09PSBJbmQgQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIEluZA0KICAgICAgLSBuYW1lOiBJbmQNCiAgICAgICAgdHlwZTogSW5kZXhlcg0KICAgICAgICBpbWFnZTogSW5kDQogICAgICAgIG1zYVNlY3JldE5hbWU6IG1zYS1zZWNyZXQNCiAgICAgICAgY29uZmlnOg0KICAgICAgICAgIEluZGV4ZXJIYXNoOiBJbmQNCkluZGV4ZXJQcm9tcHQ6IEluZA0KVXNlclRpcHM6IEluZA0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIC0gZW52VmFyOiBJbmRleGVyQXBpS2V5DQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IEluZA0KLSBlbnZWYXI6IE1vbmdvRGJDb25uZWN0aW9uU3RyaW5nDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IEluZA0KIyA9PT09PT09PSBJbmQgQk9UIFRFTVBMQVRFIEVORCA9PT09PT09PQ0KICAgICAgICAKCiMgPT09PT09PT0gQm90IDQgQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIEJvdCA0DQogICAgICAtIG5hbWU6IEJvdCA0DQogICAgICAgIHR5cGU6IEluZGV4ZXINCiAgICAgICAgaW1hZ2U6IGFjcmFwcGxpY2F0aW9ucy5henVyZWNyLmlvL3NhaS1ib3QtZnJhbWV3b3JrL2luZGV4ZXI6MC4wLjI2LmRkNTZhZjMNCiAgICAgICAgbXNhU2VjcmV0TmFtZTogbXNhLXNlY3JldA0KICAgICAgICBjb25maWc6DQogICAgICAgICAgSW5kZXhlclByb21wdDogVGVzdGluZyBhIG5ldyBwcm9tcHQgd2l0aCB1cGRhdGUuDQpJbmRleGVySGFzaDogbWM4OTIxajMyYzE4ajIxOTIxam0zDQogICAgICAgIHNlY3JldHM6DQogICAgICAgICAgLSBlbnZWYXI6IE1vbmdvRGJDb25uZWN0aW9uU3RyaW5nDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6IG1vbmdvZGI6Ly9sb2NhbGhvc3Q6MjcwMTcvDQotIGVudlZhcjogDQogICAgICAgICAgICBrZXlWYXVsdFNlY3JldE5hbWU6DQojID09PT09PT09IEJvdCA0IEJPVCBURU1QTEFURSBFTkQgPT09PT09PT0NCiAgICAgICAgDQogICAgICAgIAojID09PT09PT09IEJvdCA0IEJPVCBURU1QTEFURSA9PT09PT09PQ0KICAgICAgIyBCb3QgNA0KICAgICAgLSBuYW1lOiBCb3QgNA0KICAgICAgICB0eXBlOiBJbmRleGVyDQogICAgICAgIGltYWdlOiBhY3JhcHBsaWNhdGlvbnMuYXp1cmVjci5pby9zYWktYm90LWZyYW1ld29yay9pbmRleGVyOjAuMC4yNi5kZDU2YWYzDQogICAgICAgIG1zYVNlY3JldE5hbWU6IG1zYS1zZWNyZXQNCiAgICAgICAgY29uZmlnOg0KICAgICAgICAgIEluZGV4ZXJQcm9tcHQ6IFRlc3RpbmcgYSBuZXcgcHJvbXB0IHdpdGggdXBkYXRlIGFuZCBub3cgSSB3YW50IHRvIGRlYnVnLg0KSW5kZXhlckhhc2g6IG1jODkyMWozMmMxOGoyMTkyMWptMw0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIC0gZW52VmFyOiBNb25nb0RiQ29ubmVjdGlvblN0cmluZw0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBtb25nb2RiOi8vbG9jYWxob3N0OjI3MDE3Lw0KLSBlbnZWYXI6IA0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOg0KIyA9PT09PT09PSBCb3QgNCBCT1QgVEVNUExBVEUgRU5EID09PT09PT09DQogICAgICAgIAoKIyA9PT09PT09PSBCb3QgNCBCT1QgVEVNUExBVEUgPT09PT09PT0NCiAgICAgICMgQm90IDQNCiAgICAgIC0gbmFtZTogQm90IDQNCiAgICAgICAgdHlwZTogSW5kZXhlcg0KICAgICAgICBpbWFnZTogYWNyYXBwbGljYXRpb25zLmF6dXJlY3IuaW8vc2FpLWJvdC1mcmFtZXdvcmsvaW5kZXhlcjowLjAuMjYuZGQ1NmFmMw0KICAgICAgICBtc2FTZWNyZXROYW1lOiBtc2Etc2VjcmV0DQogICAgICAgIGNvbmZpZzoNCiAgICAgICAgICBJbmRleGVyUHJvbXB0OiBCb3QgNCBwcm9tcHQNCkluZGV4ZXJIYXNoOiBtajg5Y2plMjg5YWNzYThkbm9hOGQNCiAgICAgICAgc2VjcmV0czoNCiAgICAgICAgICAtIGVudlZhcjogTW9uZ29EYkNvbm5lY3Rpb25TdHJpbmcNCiAgICAgICAgICAgIGtleVZhdWx0U2VjcmV0TmFtZTogbW9uZ29kYjovL2xvY2FsaG9zdDoyNzAxNy8NCi0gZW52VmFyOiANCiAgICAgICAgICAgIGtleVZhdWx0U2VjcmV0TmFtZToNCiMgPT09PT09PT0gQm90IDQgQk9UIFRFTVBMQVRFIEVORCA9PT09PT09PQ0KICAgICAgICAKCiMgPT09PT09PT0gQm90IDQgQk9UIFRFTVBMQVRFID09PT09PT09DQogICAgICAjIEJvdCA0DQogICAgICAtIG5hbWU6IEJvdCA0DQogICAgICAgIHR5cGU6IEluZGV4ZXINCiAgICAgICAgaW1hZ2U6IGFjcmFwcGxpY2F0aW9ucy5henVyZWNyLmlvL3NhaS1ib3QtZnJhbWV3b3JrL2luZGV4ZXI6MC4wLjI2LmRkNTZhZjMNCiAgICAgICAgbXNhU2VjcmV0TmFtZTogbXNhLXNlY3JldA0KICAgICAgICBjb25maWc6DQogICAgICAgICAgSW5kZXhlclByb21wdDogQm90IDQgcHJvbXB0IFVQREFURQ0KSW5kZXhlckhhc2g6IG1qODljamUyODlhY3NhOGRub2E4ZA0KICAgICAgICBzZWNyZXRzOg0KICAgICAgICAgIC0gZW52VmFyOiBNb25nb0RiQ29ubmVjdGlvblN0cmluZw0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOiBtb25nb2RiOi8vbG9jYWxob3N0OjI3MDE3Lw0KLSBlbnZWYXI6IA0KICAgICAgICAgICAga2V5VmF1bHRTZWNyZXROYW1lOg0KIyA9PT09PT09PSBCb3QgNCBCT1QgVEVNUExBVEUgRU5EID09PT09PT09DQogICAgICAgIA==
+        
+        
+# ======== Bot 4 BOT TEMPLATE ========
+      # Bot 4
+      - name: Bot 4
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Testing a new prompt with update and now I want to debug.
+IndexerHash: mc8921j32c18j21921jm3
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== Bot 4 BOT TEMPLATE END ========
+        
+
+# ======== Bot 4 BOT TEMPLATE ========
+      # Bot 4
+      - name: Bot 4
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Bot 4 prompt
+IndexerHash: mj89cje289acsa8dnoa8d
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== Bot 4 BOT TEMPLATE END ========
+        
+
 # ======== Bot 5 BOT TEMPLATE ========
       # Bot 5
       - name: Bot 5
@@ -294,4 +575,22 @@ IndexerHash: 12v313qeweavavesaevaesaev
 - envVar: 
             keyVaultSecretName:
 # ======== Bot 5 BOT TEMPLATE END ========
+        
+
+# ======== Bot 5 BOT TEMPLATE ========
+      # Bot 5
+      - name: Bot 5
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Test prompt up
+IndexerHash: 12v313qeweavavesaevaesaev
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== Bot 5 BOT TEMPLATE END ========
+        
         
