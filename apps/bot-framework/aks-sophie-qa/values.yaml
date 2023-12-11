@@ -88,3 +88,18 @@ MONGO_DB: Test
 # ======== Jarvix test BOT TEMPLATE END ========
         
         
+
+# ======== Bot test BOT TEMPLATE ========
+      # Bot test
+      - name: Bot test
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/jarvix:0.0.69.66afccd
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Test
+IndexerHash: Test
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Test
+# ======== Bot test BOT TEMPLATE END ========
+        
