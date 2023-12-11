@@ -259,3 +259,19 @@ IndexerHash: mc8921j32c18j21921jm3
 # ======== {{{name}}} BOT TEMPLATE END ========
         
         
+# ======== {{{name}}} BOT TEMPLATE ========
+      # {{{name}}}
+      - name: {{{name}}}
+        type: {{{type}}}
+        image: {{{image}}}
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Testing a new prompt with update and now I want to debug.
+IndexerHash: mc8921j32c18j21921jm3
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: mongodb://localhost:27017/
+- envVar: 
+            keyVaultSecretName:
+# ======== {{{name}}} BOT TEMPLATE END ========
+        
