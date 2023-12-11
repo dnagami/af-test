@@ -81,3 +81,23 @@ IndexerHash: hahahahaha
 - envVar: OpenAiApiKey
             keyVaultSecretName: hahahahaha
 # ======== hahahahaha BOT TEMPLATE END ========
+
+# ======== lelelelele BOT TEMPLATE ========
+      # lelelelele
+      - name: lelelelele
+        type: Indexer
+        image: lelelelele
+        msaSecretName: msa-secret
+        config:
+          
+            IndexerPrompt: lelelelele
+
+            IndexerHash: lelelelele
+        secrets:
+          
+            - envVar: MongoDbConnectionString
+            keyVaultSecretName: lelelelele
+
+            - envVar: OpenAiApiKey
+            keyVaultSecretName: lelelelele
+# ======== lelelelele BOT TEMPLATE END ========
