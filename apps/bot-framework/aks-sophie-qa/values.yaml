@@ -109,3 +109,21 @@ IndexerHash: Test
         
         
         
+
+# ======== Test BOT TEMPLATE ========
+      # Test
+      - name: Test
+        type: Jarvix
+        image: Test
+        msaSecretName: msa-secret
+        config:
+          OPENAI_API_BASE: Test
+OPENAI_API_VERSION: Test
+MONGO_DB: Test
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: Test
+- envVar: OPENAI_API_KEY
+            keyVaultSecretName: Test
+# ======== Test BOT TEMPLATE END ========
+        
