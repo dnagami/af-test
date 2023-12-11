@@ -151,3 +151,18 @@ IndexerHash: Testtt
         
         
         
+
+
+# ======== Test BOT TEMPLATE ========
+      # Test:
+      - name: Test
+        type: Indexer
+        image: Test
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Test
+IndexerHash: Test
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Test
+# ======== Test BOT TEMPLATE END ========
