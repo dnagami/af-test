@@ -69,3 +69,21 @@ IndexerHash: mc8219uq88jew9acnj8eq
         
         
         
+
+# ======== Jarvix test BOT TEMPLATE ========
+      # Jarvix test
+      - name: Jarvix test
+        type: Jarvix
+        image: acrapplications.azurecr.io/sai-bot-framework/jarvix:0.0.69.66afccd
+        msaSecretName: msa-secret
+        config:
+          OPENAI_API_BASE: Test
+OPENAI_API_VERSION: Test
+MONGO_DB: Test
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: Test
+- envVar: OPENAI_API_KEY
+            keyVaultSecretName: Test
+# ======== Jarvix test BOT TEMPLATE END ========
+        
