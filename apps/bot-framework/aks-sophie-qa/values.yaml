@@ -57,12 +57,13 @@ sai-bot-framework:
         image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.26.dd56af3
         msaSecretName: msa-secret
         config:
-          IndexerPrompt: This is a prompt test 234567.
+          IndexerPrompt: This is a prompt update.
 IndexerHash: mc8219uq88jew9acnj8eq
         secrets:
           - envVar: MongoDbConnectionString
             keyVaultSecretName: mongodb://localhost:27017/
 # ======== Bot 1 BOT TEMPLATE END ========
+        
         
         
         
