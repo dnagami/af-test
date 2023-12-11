@@ -264,6 +264,7 @@ IndexerHash: hahahahaha
 
 
 
+
 # ======== florida BOT TEMPLATE ========
       # florida
       - name: florida
@@ -271,11 +272,11 @@ IndexerHash: hahahahaha
         image: florida
         msaSecretName: msa-secret
         config:
-          IndexerPrompt: florida12345
-          IndexerHash: florida12345
+          IndexerPrompt: florida
+          IndexerHash: florida
         secrets:
           - envVar: MongoDbConnectionString
-            keyVaultSecretName: florida12345
+            keyVaultSecretName: florida
           - envVar: OpenAiApiKey
-            keyVaultSecretName: florida12345
+            keyVaultSecretName: florida
 # ======== florida BOT TEMPLATE END ========
