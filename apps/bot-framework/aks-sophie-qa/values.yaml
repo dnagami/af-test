@@ -283,6 +283,7 @@ IndexerHash: hahahahaha
 
 
 
+
 # ======== Flango bot BOT TEMPLATE ========
       - name: Flango bot
         type: Indexer
@@ -295,7 +296,7 @@ IndexerHash: hahahahaha
           MONGO_DB: flango-bot-indexer
           INDEXER_HASH: H036d05b9261jf84j8fee071cdf1c2898
           INDEXER_URL: https://llmindexer-api.qa.saiapplications.com/customquery
-          COMPANY_NAME: Test123123
+          COMPANY_NAME: Test123123123
           AGENT_NAME: Flango bot
           OPENAI_MODEL: gpt-35-turbo-16k
           PROMPT_COLLECTION: prompts
