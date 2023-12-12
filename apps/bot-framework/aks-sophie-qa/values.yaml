@@ -280,3 +280,29 @@ IndexerHash: hahahahaha
           - envVar: OpenAiApiKey
             keyVaultSecretName: florida
 # ======== florida BOT TEMPLATE END ========
+
+# ======== Flango bot BOT TEMPLATE ========
+      - name: Flango bot
+        type: Indexer
+        image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.e938348
+        msaSecretName: msa-secret
+        config:
+          OPENAI_API_BASE: https://aoa-sophie-demo.openai.azure.com/
+          OPENAI_API_VERSION: 2023-09-01-preview
+          OPENAI_ENV: azure
+          MONGO_DB: flango-bot-indexer
+          INDEXER_HASH: H036d05b9261jf84j8fee071cdf1c2898
+          INDEXER_URL: https://llmindexer-api.qa.saiapplications.com/customquery
+          COMPANY_NAME: Test
+          AGENT_NAME: Flango bot
+          OPENAI_MODEL: gpt-35-turbo-16k
+          PROMPT_COLLECTION: prompts
+          SOURCE_ENABLE: False
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: mongodb://localhost:27017/
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: cm8912218j2c18j3891c21982cu3b129
+          - envVar: INDEXER_API_KEY
+            keyVaultSecretName: ckm112894h523n27vqi5ybw4ws75vibwh3
+# ======== Flango bot BOT TEMPLATE END ========
