@@ -311,3 +311,15 @@ IndexerHash: hahahahaha
           - envVar: INDEXER_API_KEY
             keyVaultSecretName: ckm112894h523n27vqi5ybw4ws75vibwh3
 # ======== Flango bot BOT TEMPLATE END ========
+
+# ======== Assistant Test BOT TEMPLATE ========
+      - name: Assistant Test
+        type: Test
+        image: Test
+        msaSecretName: msa-secret
+        config:
+          Test: Test
+        secrets:
+          - envVar: Test
+            keyVaultSecretName: Test
+# ======== Assistant Test BOT TEMPLATE END ========
