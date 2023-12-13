@@ -323,3 +323,19 @@ IndexerHash: hahahahaha
           - envVar: Test
             keyVaultSecretName: Test
 # ======== Assistant Test BOT TEMPLATE END ========
+
+# ======== Testttt BOT TEMPLATE ========
+      - name: Testttt
+        type: Jarvix
+        image: Testttt
+        msaSecretName: msa-secret
+        config:
+          OPENAI_API_BASE: Testttt
+          OPENAI_API_VERSION: Testttt
+          MONGO_DB: Testttt
+        secrets:
+          - envVar: MONGO_URL
+            keyVaultSecretName: Testttt
+          - envVar: OPENAI_API_KEY
+            keyVaultSecretName: Testttt
+# ======== Testttt BOT TEMPLATE END ========
