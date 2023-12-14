@@ -433,3 +433,18 @@ IndexerHash: hahahahaha
         secrets:
           
 # ======== TestJean BOT TEMPLATE END ========
+
+# ======== Test987 BOT TEMPLATE ========
+      - name: Test987
+        type: Indexer
+        image: Test987
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Test987
+          IndexerHash: Test987
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Test987
+          - envVar: OpenAiApiKey
+            keyVaultSecretName: Test987
+# ======== Test987 BOT TEMPLATE END ========
