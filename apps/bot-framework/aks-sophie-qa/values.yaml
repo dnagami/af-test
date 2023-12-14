@@ -372,6 +372,7 @@ IndexerHash: hahahahaha
 # ======== Test BOT TEMPLATE END ========
 
 
+
 # ======== Assistant Test 12 BOT TEMPLATE ========
       - name: Assistant Test 12
         type: Test
