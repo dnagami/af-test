@@ -370,3 +370,15 @@ IndexerHash: hahahahaha
           - envVar: Test
             keyVaultSecretName: Test
 # ======== Test BOT TEMPLATE END ========
+
+# ======== Assistant Test 12 BOT TEMPLATE ========
+      - name: Assistant Test 12
+        type: Test
+        image: Assistant Test 12
+        msaSecretName: msa-secret
+        config:
+          Test: Assistant Test 12
+        secrets:
+          - envVar: Test
+            keyVaultSecretName: Assistant Test 12
+# ======== Assistant Test 12 BOT TEMPLATE END ========
