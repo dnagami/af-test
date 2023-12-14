@@ -422,3 +422,14 @@ IndexerHash: hahahahaha
           - envVar: Test
             keyVaultSecretName: Test 123
 # ======== Test 123 BOT TEMPLATE END ========
+
+# ======== TestJean BOT TEMPLATE ========
+      - name: TestJean
+        type: 
+        image: 
+        msaSecretName: msa-secret
+        config:
+          
+        secrets:
+          
+# ======== TestJean BOT TEMPLATE END ========
