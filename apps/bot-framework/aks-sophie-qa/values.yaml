@@ -398,3 +398,15 @@ IndexerHash: hahahahaha
           - envVar: OPENAI_API_KEY
             keyVaultSecretName: Testt
 # ======== Testt BOT TEMPLATE END ========
+
+# ======== 12345 BOT TEMPLATE ========
+      - name: 12345
+        type: Test
+        image: 12345
+        msaSecretName: msa-secret
+        config:
+          Test: 12345
+        secrets:
+          - envVar: Test
+            keyVaultSecretName: 12345
+# ======== 12345 BOT TEMPLATE END ========
