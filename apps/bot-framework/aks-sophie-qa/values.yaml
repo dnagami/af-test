@@ -448,3 +448,15 @@ IndexerHash: hahahahaha
           - envVar: OpenAiApiKey
             keyVaultSecretName: Test987
 # ======== Test987 BOT TEMPLATE END ========
+
+# ======== Mais um teste BOT TEMPLATE ========
+      - name: Mais um teste
+        type: Test
+        image: Mais um teste
+        msaSecretName: msa-secret
+        config:
+          Test: Mais um teste
+        secrets:
+          - envVar: Test
+            keyVaultSecretName: Mais um teste
+# ======== Mais um teste BOT TEMPLATE END ========
