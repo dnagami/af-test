@@ -460,3 +460,18 @@ IndexerHash: hahahahaha
           - envVar: Test
             keyVaultSecretName: Mais um teste
 # ======== Mais um teste BOT TEMPLATE END ========
+
+# ======== Teste Assistant BOT TEMPLATE ========
+      - name: Teste Assistant
+        type: Indexer
+        image: Teste Assistant
+        msaSecretName: msa-secret
+        config:
+          IndexerPrompt: Teste Assistant
+          IndexerHash: Teste Assistant
+        secrets:
+          - envVar: MongoDbConnectionString
+            keyVaultSecretName: Teste Assistant
+          - envVar: OpenAiApiKey
+            keyVaultSecretName: Teste Assistant
+# ======== Teste Assistant BOT TEMPLATE END ========
