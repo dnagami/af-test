@@ -449,6 +449,7 @@ IndexerHash: hahahahaha
             keyVaultSecretName: Test987
 # ======== Test987 BOT TEMPLATE END ========
 
+
 # ======== Mais um teste BOT TEMPLATE ========
       - name: Mais um teste
         type: Test
