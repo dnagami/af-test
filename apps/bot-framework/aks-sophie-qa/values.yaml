@@ -462,6 +462,7 @@ IndexerHash: hahahahaha
 # ======== Mais um teste BOT TEMPLATE END ========
 
 
+
 # ======== Teste Assistant BOT TEMPLATE ========
       - name: Teste Assistant
         type: Indexer
