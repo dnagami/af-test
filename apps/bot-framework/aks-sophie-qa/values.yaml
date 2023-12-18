@@ -434,6 +434,7 @@ IndexerHash: hahahahaha
           
 # ======== TestJean BOT TEMPLATE END ========
 
+
 # ======== Test987 BOT TEMPLATE ========
       - name: Test987
         type: Indexer
@@ -447,10 +448,7 @@ IndexerHash: hahahahaha
             keyVaultSecretName: Test987
           - envVar: OpenAiApiKey
             keyVaultSecretName: Test987
-# ======== Test987 BOT TEMPLATE END ========
-
-
-# ======== Mais um teste BOT TEMPLATE ========
+# ======== Test987 BOT TEMPLATE END ========# ======== Mais um teste BOT TEMPLATE ========
       - name: Mais um teste
         type: Test
         image: Mais um teste
