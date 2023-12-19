@@ -36,3 +36,21 @@ spec:
   - envVar: OpenAiApiKey
     keyVaultSecretName: Teste Assistant
 
+
+apiVersion: innovation.bots/v1
+kind: Indexer
+metadata:
+  name: Testing
+  namespace: 
+status: 
+spec:
+  image: Testing
+  msaAppSecret: kv-bots-rd
+  config:
+    IndexerPrompt: Testing
+    IndexerHash: Testing
+  secrets:
+  - envVar: MongoDbConnectionString
+    keyVaultSecretName: Testing
+  - envVar: OpenAiApiKey
+    keyVaultSecretName: Testing
