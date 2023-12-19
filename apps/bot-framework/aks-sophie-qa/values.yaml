@@ -54,3 +54,22 @@ spec:
     keyVaultSecretName: Testing
   - envVar: OpenAiApiKey
     keyVaultSecretName: Testing
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: Jarvix
+  namespace: 
+status: 
+spec:
+  image: My Assistant
+  msaAppSecret: kv-bots-rd
+  config:
+    OPENAI_API_BASE: My Assistant
+    OPENAI_API_VERSION: My Assistant
+    MONGO_DB: My Assistant
+  secrets:
+  - envVar: MONGO_URL
+    keyVaultSecretName: My Assistant
+  - envVar: OPENAI_API_KEY
+    keyVaultSecretName: My Assistant
