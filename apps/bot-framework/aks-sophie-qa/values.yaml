@@ -73,3 +73,21 @@ spec:
     keyVaultSecretName: My Assistant
   - envVar: OPENAI_API_KEY
     keyVaultSecretName: My Assistant
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: Indexer
+  namespace: 
+status: 
+spec:
+  image: Test Encrypt
+  msaAppSecret: kv-bots-rd
+  config:
+    IndexerPrompt: Test Encrypt
+    IndexerHash: Test Encrypt
+  secrets:
+  - envVar: MongoDbConnectionString
+    keyVaultSecretName: Unicode~gAAAAABlgc8MogGn_-ptyhX03gHNvD5gLmv95qHPw8w3R09-aDn8A5ZqUUGhsrZBo7ByKDpy7jsJr6P3VwbFdFNSx2_GaNkHjtJ06GXMCl5hgkcc3SmXfXUeUaWjasmwY8dHE2iISl5r
+  - envVar: OpenAiApiKey
+    keyVaultSecretName: Unicode~gAAAAABlgc8M5fPsIhUVBSDGX87bjTAASza5bgQpL9Q50vBuyvQ8296JEnaRUpWVnbTj8Jx7AIMC4kfAyHDwKB9m6bmq_qQAObeyPk1NHTk7KaOCUMa4nZetKhjJDe6WzYntGzm_pMET
