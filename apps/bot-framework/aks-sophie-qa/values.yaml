@@ -91,3 +91,31 @@ spec:
     keyVaultSecretName: Unicode~gAAAAABlgc8MogGn_-ptyhX03gHNvD5gLmv95qHPw8w3R09-aDn8A5ZqUUGhsrZBo7ByKDpy7jsJr6P3VwbFdFNSx2_GaNkHjtJ06GXMCl5hgkcc3SmXfXUeUaWjasmwY8dHE2iISl5r
   - envVar: OpenAiApiKey
     keyVaultSecretName: Unicode~gAAAAABlgc8M5fPsIhUVBSDGX87bjTAASza5bgQpL9Q50vBuyvQ8296JEnaRUpWVnbTj8Jx7AIMC4kfAyHDwKB9m6bmq_qQAObeyPk1NHTk7KaOCUMa4nZetKhjJDe6WzYntGzm_pMET
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: indexer
+  namespace: 
+status: 
+spec:
+  image: acrapplications.azurecr.io/sai-bot-framework/indexer:0.0.31.e938348
+  msaAppSecret: kv-bots-rd
+  config:
+    OPENAI_API_BASE: https://aoa-sophie-demo.openai.azure.com/
+    OPENAI_API_VERSION: 2023-09-01-preview
+    OPENAI_ENV: azure
+    MONGO_DB: honda-indexer
+    INDEXER_HASH: H036d05b9261d4a9a8fee071cdf1c2898
+    INDEXER_URL: https://llmindexer-api-ext.qa.saiapplications.com/customquery
+    COMPANY_NAME: Honda
+    AGENT_NAME: Hikari
+    OPENAI_MODEL: gpt-35-turbo-16k
+    SOURCE_ENABLE: False
+  secrets:
+  - envVar: MONGO_URL
+    keyVaultSecretName: Unicode~gAAAAABlguKVL_-HvOUFc0lwKe3Y1KTK5SiLjKgzpnm28AWCgs-Z6k3cBbTreVg6GYXWn4r3zsxV7zCwQQatPG-HPGeHGB6zORNJ-F-rBGF2fsqoGMXagUyEeQy2BaFnyPIdb3eGlc56PR2u6_NKX11A6TsYDA2LwZ8POEXAPXv2VFpFN_925nrzHLMJG65pey0-rBTwFALHKRTx5hoRFsYbAdUXno9DD1ddTGO4tCoz8g7yqpGblO5ea2PGISoLPC_WSgeUNya6iqiz-M9aJim-6r46Tk-KiTf_PC9NPaQmNcMkRcN3Zu8Mn7j3whU5qWr-HANptfjPHq2k1AVcCnzBAcKDBjdctYxGEX0u1KX9iOUqergh0G-bKu69pgn3TsQQbwL4Nxbk
+  - envVar: OPENAI_API_KEY
+    keyVaultSecretName: Unicode~gAAAAABlguKVuAN2rRG5a2D917Y4s_SyprjdVIzOj743uyTRpSDCIwtr6w8KKZ9IFRd9rG5GIQ54exWARS3f--J_nKzXFztId53ljqthFjtE-00JLO-s5R0YhIya9ZF6McZrBT2oAEusaiUbL84xtjryK2houC1IFSnPpnYQWbx1_aEIm2YaXws=
+  - envVar: INDEXER_API_KEY
+    keyVaultSecretName: Unicode~gAAAAABlguKV-clbcouunUa0tnZgrRsTtrx_kN6FpHUw1Q2J4hk4q5LsxSNmLdXsUh9vgv_PLdL6F3VSklCUHSjn1pv3BIQK9rMSzVUsghNs5V4eMs9jIWoDmtR2oZ8yUdWyq1S9oECv8pNd3-9YOPPvtHC4VDNmNFcg4iWLrgdItWdzMB3DrdHCKVM5gfaePxJd8o611Z4V
