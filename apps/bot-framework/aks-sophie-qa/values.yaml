@@ -119,3 +119,23 @@ spec:
     keyVaultSecretName: Unicode~gAAAAABlguKVuAN2rRG5a2D917Y4s_SyprjdVIzOj743uyTRpSDCIwtr6w8KKZ9IFRd9rG5GIQ54exWARS3f--J_nKzXFztId53ljqthFjtE-00JLO-s5R0YhIya9ZF6McZrBT2oAEusaiUbL84xtjryK2houC1IFSnPpnYQWbx1_aEIm2YaXws=
   - envVar: INDEXER_API_KEY
     keyVaultSecretName: Unicode~gAAAAABlguKV-clbcouunUa0tnZgrRsTtrx_kN6FpHUw1Q2J4hk4q5LsxSNmLdXsUh9vgv_PLdL6F3VSklCUHSjn1pv3BIQK9rMSzVUsghNs5V4eMs9jIWoDmtR2oZ8yUdWyq1S9oECv8pNd3-9YOPPvtHC4VDNmNFcg4iWLrgdItWdzMB3DrdHCKVM5gfaePxJd8o611Z4V
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: App Credentials
+  namespace: 
+status: 
+spec:
+  image: Test
+  msaAppSecret: kv-bots-rd
+  config: {}
+  secrets:
+  - envVar: MicrosoftAppType
+    keyVaultSecretName: Unicode~gAAAAABlhXQE7O3QP5SKo4JwOzpUwkW9m8C7ARhTZkvicYohxMwZMh92gT_FzVb05BP_4iohnFyNk2XLjzC4JH5mYR0UlYNKHESHYU2_KCm9TsJsRRpnTTw=
+  - envVar: MicrosoftAppId
+    keyVaultSecretName: Unicode~gAAAAABlhXQEIZw1X_BMFbM8p31_REumvv1KD5k7YS7Op-22ACeKmyQBz6lpS8mqrpttlCFKAc8um9vgL2xmVhiGluUEjMZfNe4W7kB7lsbRBXcZltLp2-ZS2Rl00PmgCEwfzt5Mn_ruT7S-rtQuhUh5cONgGhByCgJ-jS4CohP2W4PXuFRXQPA=
+  - envVar: MicrosoftAppPassword
+    keyVaultSecretName: Unicode~gAAAAABlhXQEsnmTxYYZeKpOksODFIk7-2cxoKav3LCKEuyBgp3OE7Jfx5g_0Ftqzot4XJbO1VPD3cJxjSAkgK-8hy60lM78Btk0ZlekoF6wlyR9Kjg9TEGGdDGS2JmpxdImcHuqX4woUP1gKs7nMJ7rqf85sCEPpMlXpfwG7gT_-rTsRP_HmJxRMVlGLxoBlze8MMO09uvO
+  - envVar: MicrosoftAppTenantId
+    keyVaultSecretName: Unicode~gAAAAABlhXQEvzaQy3_iUy1ZKp3i3EBg4JnlwbdGcfe40LeGz4Vo8M06gEOMkNMwFr8g6DEbR6tr5ji8rSZIMRHXuNjDBt3efmbExE4sBVDIrgkcMhIq226bEWcCDJdpaBMotQ543ne34iEGjkU_5nYy7ypeWdiZwEi-fpEXkU1UoEinO9PSM84=
