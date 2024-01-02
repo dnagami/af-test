@@ -237,3 +237,20 @@ spec:
     keyVaultSecretName: Testtt
   - envVar: OpenAiApiKey
     keyVaultSecretName: Testtt
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: Test123
+  namespace: 
+spec:
+  image: Image Path Test123
+  msaSecretName: MSA Secret Name Test123
+  config:
+    IndexerPrompt: Test123
+    IndexerHash: Test123456
+  secrets:
+  - envVar: MongoDbConnectionString
+    keyVaultSecretName: Test123456789
+  - envVar: OpenAiApiKey
+    keyVaultSecretName: Test1234567890
