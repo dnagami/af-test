@@ -254,3 +254,20 @@ spec:
     keyVaultSecretName: Test123456789
   - envVar: OpenAiApiKey
     keyVaultSecretName: Test1234567890
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: myassistant
+  namespace: 
+spec:
+  image: myassistantimage
+  msaSecretName: myassistantsecret
+  config:
+    IndexerPrompt: myassistantprompt
+    IndexerHash: myassistanthash
+  secrets:
+  - envVar: MongoDbConnectionString
+    keyVaultSecretName: Unicode~gAAAAABlk89ODQDLv0DIoQ_kPEVe2lg-ZOatREkiDvGLrE817Yk_C-bD5mp-qn2doK-ZkeAanBcDVPHAbdDJ23wkJTaFRmPdnWSFNeQAlDD-ASHCPZ5pVS_wMAqbVkj1cD0pRUuh8SQl
+  - envVar: OpenAiApiKey
+    keyVaultSecretName: Unicode~gAAAAABlk89OCnn4lKKQrlPEGaeE6sE4fPK5cI6SnJbjZll1wC_2VooQYkJ6DQHKPsLjfVeMv0Fswzy9K5l2Y9wQjcQpZjXEtTYFiqDaNVJwVAZyr7t3N-Q=
