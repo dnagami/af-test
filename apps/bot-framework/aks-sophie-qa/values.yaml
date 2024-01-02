@@ -179,3 +179,23 @@ spec:
     keyVaultSecretName: 
   - envVar: MicrosoftAppTenantId
     keyVaultSecretName: 
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: App Credentials
+  namespace: 
+status: 
+spec:
+  image: ''
+  msaAppSecret: kv-bots-rd
+  config: {}
+  secrets:
+  - envVar: MicrosoftAppType
+    keyVaultSecretName: 
+  - envVar: MicrosoftAppId
+    keyVaultSecretName: Unicode~gAAAAABlk7AQUT5MeoCE_zF8wDZ-O5StupPnDnxDNT-sIP0r7ViML0StlKxe0mowA7vkeUp7SWYjfAOge3RtVILBL8sl0rd9fZGqdytqWVBF19YUaWh2JnVCCbCFjhVJTYRetSM7w677wc7Tafzc3ifQjLTpbbt8uHpEko3m0eCxm3gvtRxDU7I=
+  - envVar: MicrosoftAppPassword
+    keyVaultSecretName: Unicode~gAAAAABlk7AQK6flHhkK_G40DnV1pImyCeTgLA51wTce-2YBW59tQPsQLJc2YK9BJmvaEUU-hHD8e3YtPKuLtanmO0IsY9jNkLK45deIb_lBF7dJyU2s_tDI6wJypdhBxVp4HeerZ8s8uqvHTezezFZTfrCWf8MlPOExy44p1Ox4w8KLxnWTOG0GtLd8RxQiWO6n5uz_rPia
+  - envVar: MicrosoftAppTenantId
+    keyVaultSecretName: Unicode~gAAAAABlk7AQNEDbVjwTfG2rK8BzIBvzLyOHeaRU4iDzyPKWpIDPfYbLtukegps1w6YZzJ74OPL9qr612QhyaH-ngSnql9IZN94b-gboz-mcn_9YTBPhTliLyl5fTw9GpOo3sPib-nvv_RaKTXSGJlO0usdxA0qWonDnFc1QxLulB5GpdbKpJWM=
