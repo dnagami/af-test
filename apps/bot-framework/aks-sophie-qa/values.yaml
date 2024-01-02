@@ -219,3 +219,21 @@ spec:
     keyVaultSecretName: 
   - envVar: MicrosoftAppTenantId
     keyVaultSecretName: 
+
+apiVersion: innovation.bots/v1
+kind: BotEntity
+metadata:
+  name: Indexer
+  namespace: 
+status: 
+spec:
+  image: IMAGETesttt
+  msaSecretName: 
+  config:
+    IndexerPrompt: Testtt
+    IndexerHash: Testtt
+  secrets:
+  - envVar: MongoDbConnectionString
+    keyVaultSecretName: Testtt
+  - envVar: OpenAiApiKey
+    keyVaultSecretName: Testtt
